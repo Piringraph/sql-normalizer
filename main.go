@@ -11,7 +11,7 @@ import (
 const (
 	host     = "localhost"
 	port     = 5432
-	user     = "Matt"
+	user     = "felix"
 	password = "123"
 	dbname   = "gnema"
 )
