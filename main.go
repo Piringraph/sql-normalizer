@@ -17,7 +17,7 @@ const (
 )
 
 func main() {
-	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s password=%s sslmode=disable", host, port, user,
+	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+"password=%s sslmode=disable", host, port, user,
 		password)
 	db, err := sql.Open("postgres", psqlInfo)
 	if err != nil {
@@ -30,6 +30,8 @@ func main() {
 	db.Close()
 
 	createPhoneNumbersTable(db)
+
+	fmt.Println("Successfully connected!")
 }
 
 func createPhoneNumbersTable(db *sql.DB) error {
