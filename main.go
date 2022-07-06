@@ -11,9 +11,9 @@ import (
 const (
 	host     = "localhost"
 	port     = 5432
-	user     = "felix"
+	user     = "postgres"
 	password = "123"
-	dbname   = "gnema"
+	dbname   = "postgres_DB"
 )
 
 func main() {
